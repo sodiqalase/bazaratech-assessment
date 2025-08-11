@@ -22,13 +22,13 @@ export default function GlobalError({
         console.error(error);
     }, [error]);
     return (
-        <html>
+        <html lang="en">
             <body>
                 <div
                     className={`${interFont.variable} h-screen px-5 w-screen grid justify-center items-center font-sans`}
                 >
                     <div className="flex flex-col items-center">
-                        <ToolIcon/>
+                        <ToolIcon />
                         <h6 className="text-[20px] text-sm font-medium text-primary">
                             We encountered an error while loading this page
                         </h6>

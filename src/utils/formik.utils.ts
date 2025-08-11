@@ -1,6 +1,6 @@
 import { getIn, FormikErrors, FormikTouched } from 'formik';
 
-export const evaluateFormikError = <T = any>(
+export const evaluateFormikError = <T = Record<string, unknown>>(
     errors: FormikErrors<T> | undefined | null,
     touched: FormikTouched<T> | undefined | null,
     name: string

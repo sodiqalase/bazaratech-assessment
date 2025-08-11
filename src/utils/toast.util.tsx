@@ -4,8 +4,8 @@ import {
     InformationCircleIcon,
     ExclamationTriangleIcon,
 } from "@heroicons/react/24/solid";
-import clsx from "clsx";
 import toast from "react-hot-toast";
+import { cn } from "./strings.utils";
 
 export class Toast {
     static error(title: string, message: string) {
@@ -40,7 +40,7 @@ export class Toast {
                 } max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto flex p-2 gap-3 items-center`}
             >
                 {Icon}
-                <div className={clsx("flex flex-col")}>
+                <div className={cn("flex flex-col")}>
                     <span className="block mb-1 text-sm font-semibold">
                         {title}
                     </span>

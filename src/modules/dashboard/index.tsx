@@ -11,19 +11,19 @@ import RequestTicketTable from "./RequestTicketTable"
 
 const DashboardAnalytics = () => {
   return (
-    <section className="flex flex-col gap-y-10">
-     <TicketOverviewSection/>
-     <GridAnalyticsSection/>
-     <ChangeRequestChart/>
-     <AwaitingApprovalTable/>
-     <IncidentTicketTable/>
-     <TicketResolutionChart/>
-     <div className="grid grid-cols-2 items-start gap-x-4">
-      <ChangeRequestTwo/>
-      <RequestTicketTable/>
-     </div>
-    </section>
-  )
+      <section className="flex flex-col gap-y-10">
+          <TicketOverviewSection />
+          <GridAnalyticsSection />
+          <ChangeRequestChart />
+          <AwaitingApprovalTable />
+          <IncidentTicketTable />
+          <TicketResolutionChart />
+          <div className="grid grid-cols-2 gap-x-4">
+              <ChangeRequestTwo />
+              <RequestTicketTable />
+          </div>
+      </section>
+  );
 }
 
 export default DashboardAnalytics

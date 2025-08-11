@@ -25,53 +25,88 @@ export const ticketResolutionLegend = [
 // Chart data
 export const changeRequestStatusData = [
     {
-        name: "Page A",
+        name: "Jan",
         Emergency: 4000,
         Normal: 2400,
         Standard: 3200,
         amt: 2400,
     },
     {
-        name: "Page B",
+        name: "Feb",
         Emergency: 3000,
         Normal: 1398,
         Standard: 2500,
         amt: 2210,
     },
     {
-        name: "Page C",
+        name: "Mar",
         Emergency: 2000,
         Normal: 9800,
         Standard: 4100,
         amt: 2290,
     },
     {
-        name: "Page D",
+        name: "Apr",
         Emergency: 2780,
         Normal: 3908,
         Standard: 3600,
         amt: 2000,
     },
     {
-        name: "Page E",
+        name: "May",
         Emergency: 1890,
         Normal: 4800,
         Standard: 2900,
         amt: 2181,
     },
     {
-        name: "Page F",
+        name: "Jun",
         Emergency: 2390,
         Normal: 3800,
         Standard: 3700,
         amt: 2500,
     },
     {
-        name: "Page G",
+        name: "Jul",
         Emergency: 3490,
         Normal: 4300,
         Standard: 4200,
         amt: 2100,
+    },
+    {
+        name: "Aug",
+        Emergency: 3200,
+        Normal: 4100,
+        Standard: 3900,
+        amt: 2300,
+    },
+    {
+        name: "Sep",
+        Emergency: 2800,
+        Normal: 3700,
+        Standard: 3500,
+        amt: 2400,
+    },
+    {
+        name: "Oct",
+        Emergency: 2600,
+        Normal: 3500,
+        Standard: 3300,
+        amt: 2200,
+    },
+    {
+        name: "Nov",
+        Emergency: 3000,
+        Normal: 3900,
+        Standard: 3800,
+        amt: 2600,
+    },
+    {
+        name: "Dec",
+        Emergency: 3400,
+        Normal: 4200,
+        Standard: 4000,
+        amt: 2800,
     },
 ];
 
@@ -110,17 +145,17 @@ export const averageAnalyticsData = [
 
 // Change request pie chart data
 export const changeRequestPieData = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
+    { name: "Title", value: 400 },
+    { name: "Title", value: 300 },
+    { name: "Title", value: 300 },
+    { name: "Title", value: 200 },
 ];
 
 export const changeRequestPieColors = [
-    "#0088FE",
-    "#00C49F",
-    "#FFBB28",
-    "#FF8042",
+    "#FFC300",
+    "#00C033",
+    "#9A00C0",
+    "#C0006A",
 ] as const;
 
 export const monthlyTicketStats = [

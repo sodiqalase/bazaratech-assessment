@@ -7,8 +7,12 @@ import { changeRequestBarColors, changeRequestBarData } from "@/data/dashbaord";
 
 const ChangeRequestTwo = () => {
     return (
-        <CardWrapper rightIcon="arrow" title="Change Request By Status">
-            <ResponsiveContainer width="100%" height={300}>
+        <CardWrapper
+            className="h-full"
+            rightIcon="arrow"
+            title="Change Request By Status"
+        >
+            <ResponsiveContainer className="pb-2" width="100%" height="100%">
                 <BarChart
                     data={changeRequestBarData}
                     layout="horizontal"
@@ -31,7 +35,7 @@ const ChangeRequestTwo = () => {
 
                     <Bar
                         dataKey="uv"
-                        radius={[6, 6, 0, 0]}
+                        radius={[2, 2, 0, 0]}
                         barSize={140}
                         isAnimationActive={false}
                         stroke="none"
