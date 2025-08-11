@@ -10,8 +10,8 @@ interface ISpinner {
 const sizeMap = {
     sm: "16",
     md: "24",
-    lg: "32"
-};
+    lg: "32",
+} as const;
 
 const Spinner = (props: ISpinner) => {
     const { size = "sm", colour = "#ffffff", ...rest } = props;
@@ -31,8 +31,12 @@ const Spinner = (props: ISpinner) => {
             <g fill="none" fillRule="evenodd">
                 <g transform="translate(1 1)" strokeWidth="2">
                     <circle strokeOpacity=".5" cx="18" cy="18" r="18" />
-                    <path d="M36 18c0-9.94-8.06-18-18-18" data-testid="spinner-animation">
-                        <animateTransform data-testid="spinner-animate"
+                    <path
+                        d="M36 18c0-9.94-8.06-18-18-18"
+                        data-testid="spinner-animation"
+                    >
+                        <animateTransform
+                            data-testid="spinner-animate"
                             attributeName="transform"
                             type="rotate"
                             from="0 18 18"

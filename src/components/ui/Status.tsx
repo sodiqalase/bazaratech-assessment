@@ -7,7 +7,6 @@ const statusValue = {
     canceled: "canceled",
     successful: "successful",
     failed: "failed",
-    
 } as const;
 
 export type IStatus = keyof typeof statusValue;

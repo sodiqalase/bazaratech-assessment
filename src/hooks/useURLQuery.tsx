@@ -13,7 +13,6 @@ export const useURLQuery = <
 
     const query = useMemo(() => {
         const url = new URLSearchParams(search);
-        // convert url to object
         const q = Array.from(url.keys()).reduce<T>((acc, cur) => {
             return { ...acc, [cur]: url.get(cur) };
         }, {} as T);
@@ -26,10 +25,7 @@ export const useURLQuery = <
 
     return {
         value: query as Partial<T>,
-        setURLQuery: (
-            queries: Partial<T>, // Record<string, string | null>,
-            clearAll: boolean = false
-        ) => {
+        setURLQuery: (queries: Partial<T>, clearAll: boolean = false) => {
             const url = new URLSearchParams(clearAll ? "" : search);
 
             Object.keys(queries).forEach((key) => {

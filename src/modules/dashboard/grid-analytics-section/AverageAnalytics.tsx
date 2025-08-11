@@ -6,16 +6,13 @@ import { IAverageAnalyticsCardProps } from "@/interfaces/analytics.interface";
 import { formatWithCommas } from "@/utils/numbers.util";
 import React from "react";
 
-const data = [
-	{ time: "0:04:01", duration: "Hours", percentage: 11.2 },
-	{ time: "0:04:01", duration: "Minutes", percentage: 11.2 },
-];
+import { averageAnalyticsData } from "@/data/dashbaord";
 
 const AverageAnalytics = () => {
 	return (
 		<div className="grid grid-cols-2 gap-x-3">
-			{data.map((item, index) => (
-				<CardWrapper rightIcon='arrow' title="Average Incident Response Time - Metrics" key={index}>
+			{averageAnalyticsData.map((item, index) => (
+				<CardWrapper rightIcon="arrow" title="Average Incident Response Time - Metrics" key={index}>
 					<AverageAnalyticsCard key={index} {...item} />{" "}
 				</CardWrapper>
 			))}

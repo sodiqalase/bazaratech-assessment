@@ -31,10 +31,23 @@ src/
 │   ├── layout/        # Layout components
 │   └── ui/            # UI components (buttons, forms, etc.)
 ├── data/              # Static data and constants
+│   ├── constant.ts    # Global constants
+│   └── dashboard.ts   # Dashboard mock data and configurations
 ├── hooks/             # Custom React hooks
 ├── interfaces/        # TypeScript interfaces
 ├── modules/           # Feature-specific modules
 │   ├── dashboard/     # Dashboard-specific components
+│   │   ├── grid-analytics-section/  # Grid analytics components
+│   │   │   ├── AgentTicket.tsx     # Agent ticket analytics
+│   │   │   ├── AverageAnalytics.tsx # Response time analytics
+│   │   │   └── ChangeRequest.tsx    # Change request pie chart
+│   │   ├── ticket-overview-section/ # Ticket overview components
+│   │   ├── AwaitingApprovalTable.tsx # Approval table
+│   │   ├── ChangeRequestChart.tsx    # Change request line chart
+│   │   ├── ChangeRequestTwo.tsx      # Change request bar chart
+│   │   ├── IncidentTicketTable.tsx   # Incident tickets
+│   │   ├── RequestTicketTable.tsx    # Request tickets
+│   │   └── TicketResolutionChart.tsx # Resolution analytics
 │   └── login/        # Authentication components
 ├── store/             # Zustand store configurations
 ├── styles/            # Global styles and CSS modules
@@ -48,14 +61,24 @@ public/               # Static assets
 
 ## Key Features
 
-- 🔐 Authentication system
-- 📊 Dashboard with analytics
-- 📱 Responsive design
-- 🎨 Modern UI components
-- 📈 Data visualization with Recharts
-- 🧪 Unit testing setup
-- 🔍 Type-safe development
-- 🚀 Performance optimized
+- 🔐 Authentication system with secure login
+- 📊 Comprehensive dashboard with multiple analytics views:
+  - Change request analytics (line chart, bar chart, pie chart)
+  - Ticket resolution tracking
+  - Agent performance metrics
+  - Response time analytics
+  - Approval workflows
+- 📈 Advanced data visualization using Recharts:
+  - Line charts for trend analysis
+  - Bar charts for comparison
+  - Pie charts for distribution
+  - Custom legends and tooltips
+- 📱 Responsive design with modern UI
+- 🎨 Modular component architecture
+- 🔍 Type-safe development with TypeScript
+- 🧪 Comprehensive test coverage
+- 🚀 Performance optimized with Next.js 14
+- 📦 Centralized data management
 
 ## Getting Started
 
@@ -91,13 +114,45 @@ public/               # Static assets
 
 ## Project Conventions
 
-- **Components:** Follow a modular structure with dedicated folders for different types of components
-- **Testing:** Unit tests are placed in `__tests__` directory mirroring the source structure
-- **Styling:** Utilize TailwindCSS classes with custom utilities when needed
-- **State Management:** Zustand stores for global state, React Query for server state
-- **API Routes:** Implemented in the `app/api` directory following Next.js 14 conventions
-- **Error Handling:** Global error boundary and toast notifications
-- **Type Safety:** Strict TypeScript configuration with comprehensive interfaces
+- **Components:**
+  - Follow a modular structure with dedicated folders for different types of components
+  - Dashboard components are organized by feature (analytics, tickets, charts)
+  - Reusable UI components are kept in the `components/ui` directory
+  - Icons are maintained as individual components in `components/icons`
+
+- **Data Management:**
+  - Mock data and configurations are centralized in `data/dashboard.ts`
+  - Constants are separated in `data/constant.ts`
+  - Type definitions are maintained in `interfaces` directory
+
+- **Testing:**
+  - Unit tests are placed in `__tests__` directory mirroring the source structure
+  - Each major component has corresponding test files
+  - Mock data is used consistently across tests
+
+- **Styling:**
+  - Utilize TailwindCSS classes with custom utilities when needed
+  - Consistent spacing and layout patterns
+  - Responsive design considerations in all components
+
+- **State Management:**
+  - Zustand stores for global state
+  - React Query for server state
+  - Local state for component-specific data
+
+- **API Routes:**
+  - Implemented in the `app/api` directory following Next.js 14 conventions
+  - Organized by feature (auth, me, etc.)
+
+- **Error Handling:**
+  - Global error boundary for app-wide error catching
+  - Toast notifications for user feedback
+  - Consistent error patterns across components
+
+- **Type Safety:**
+  - Strict TypeScript configuration
+  - Comprehensive interfaces for all data structures
+  - Proper type definitions for component props
 
 ## Environment Setup
 
